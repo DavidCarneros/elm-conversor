@@ -1,0 +1,16 @@
+var _user$project$Types$Model = F4(
+	function (a, b, c, d) {
+		return {display: a, result: b, conversion: c, last: d};
+	});
+var _user$project$Types$None = {ctor: 'None'};
+var _user$project$Types$Oct = {ctor: 'Oct'};
+var _user$project$Types$Hex = {ctor: 'Hex'};
+var _user$project$Types$Bin = {ctor: 'Bin'};
+var _user$project$Types$Clear = {ctor: 'Clear'};
+var _user$project$Types$Conv = function (a) {
+	return {ctor: 'Conv', _0: a};
+};
+var _user$project$Types$Value = function (a) {
+	return {ctor: 'Value', _0: a};
+};
+var _user$project$Types$Calc = {ctor: 'Calc'};

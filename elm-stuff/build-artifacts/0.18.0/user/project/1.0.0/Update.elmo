@@ -1,0 +1,65 @@
+var _user$project$Update$initialModel = {display: '0000000', result: '0000000', conversion: _user$project$Types$None, last: _user$project$Types$Clear};
+var _user$project$Update$update = F2(
+	function (msg, model) {
+		var _p0 = msg;
+		switch (_p0.ctor) {
+			case 'Value':
+				var _p1 = _p0._0;
+				return _elm_lang$core$Native_Utils.eq(model.last, _user$project$Types$Clear) ? _elm_lang$core$Native_Utils.update(
+					model,
+					{
+						display: _elm_lang$core$Basics$toString(_p1),
+						last: _user$project$Types$Value(_p1)
+					}) : _elm_lang$core$Native_Utils.update(
+					model,
+					{
+						display: A2(
+							_elm_lang$core$Basics_ops['++'],
+							model.display,
+							_elm_lang$core$Basics$toString(_p1)),
+						last: _user$project$Types$Value(_p1)
+					});
+			case 'Conv':
+				var _p2 = _p0._0;
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{
+						conversion: _p2,
+						last: _user$project$Types$Conv(_p2)
+					});
+			case 'Clear':
+				return _elm_lang$core$Native_Utils.update(
+					model,
+					{display: '000000', result: '000000', last: _user$project$Types$Clear});
+			default:
+				if (!_elm_lang$core$Native_Utils.eq(
+					model.last,
+					_user$project$Types$Conv(_user$project$Types$None))) {
+					var _p3 = model.conversion;
+					switch (_p3.ctor) {
+						case 'Bin':
+							return _elm_lang$core$Native_Utils.update(
+								model,
+								{
+									result: _user$project$Tools$convertToBin(model.display)
+								});
+						case 'Hex':
+							return _elm_lang$core$Native_Utils.update(
+								model,
+								{
+									result: _user$project$Tools$convertToHex(model.display)
+								});
+						case 'Oct':
+							return _elm_lang$core$Native_Utils.update(
+								model,
+								{
+									result: _user$project$Tools$convertToOct(model.display)
+								});
+						default:
+							return _user$project$Update$initialModel;
+					}
+				} else {
+					return _user$project$Update$initialModel;
+				}
+		}
+	});

@@ -1,0 +1,94 @@
+var _user$project$Tools$decToOct = function (value) {
+	var mod = A2(_elm_lang$core$Basics_ops['%'], value, 8);
+	var div = (value / 8) | 0;
+	return _elm_lang$core$Native_Utils.eq(div, 0) ? _elm_lang$core$Basics$toString(mod) : A2(
+		_elm_lang$core$Basics_ops['++'],
+		_user$project$Tools$decToOct(div),
+		_elm_lang$core$Basics$toString(mod));
+};
+var _user$project$Tools$convertToOct = function (input) {
+	return _user$project$Tools$decToOct(
+		A2(
+			_elm_lang$core$Maybe$withDefault,
+			0,
+			_elm_lang$core$Result$toMaybe(
+				_elm_lang$core$String$toInt(input))));
+};
+var _user$project$Tools$decToHex = function (value) {
+	decToHex:
+	while (true) {
+		var result = (value / 16) | 0;
+		var mod = A2(_elm_lang$core$Basics_ops['%'], value, 16);
+		if (_elm_lang$core$Native_Utils.eq(value, 0)) {
+			return '';
+		} else {
+			if (_elm_lang$core$Native_Utils.cmp(mod, 10) > -1) {
+				var _p0 = mod;
+				switch (_p0) {
+					case 10:
+						return A2(
+							_elm_lang$core$Basics_ops['++'],
+							_user$project$Tools$decToHex(result),
+							'A');
+					case 11:
+						return A2(
+							_elm_lang$core$Basics_ops['++'],
+							_user$project$Tools$decToHex(result),
+							'B');
+					case 12:
+						return A2(
+							_elm_lang$core$Basics_ops['++'],
+							_user$project$Tools$decToHex(result),
+							'C');
+					case 13:
+						return A2(
+							_elm_lang$core$Basics_ops['++'],
+							_user$project$Tools$decToHex(result),
+							'D');
+					case 14:
+						return A2(
+							_elm_lang$core$Basics_ops['++'],
+							_user$project$Tools$decToHex(result),
+							'E');
+					case 15:
+						return A2(
+							_elm_lang$core$Basics_ops['++'],
+							_user$project$Tools$decToHex(result),
+							'F');
+					default:
+						var _v1 = result;
+						value = _v1;
+						continue decToHex;
+				}
+			} else {
+				return A2(
+					_elm_lang$core$Basics_ops['++'],
+					_user$project$Tools$decToHex(result),
+					_elm_lang$core$Basics$toString(mod));
+			}
+		}
+	}
+};
+var _user$project$Tools$convertToHex = function (input) {
+	return _user$project$Tools$decToHex(
+		A2(
+			_elm_lang$core$Maybe$withDefault,
+			0,
+			_elm_lang$core$Result$toMaybe(
+				_elm_lang$core$String$toInt(input))));
+};
+var _user$project$Tools$decToBin = function (value) {
+	return _elm_lang$core$Native_Utils.eq((value / 2) | 0, 0) ? '0' : (_elm_lang$core$Native_Utils.eq((value / 2) | 0, 1) ? '1' : A2(
+		_elm_lang$core$Basics_ops['++'],
+		_user$project$Tools$decToBin((value / 2) | 0),
+		_elm_lang$core$Basics$toString(
+			A2(_elm_lang$core$Basics_ops['%'], value, 2))));
+};
+var _user$project$Tools$convertToBin = function (input) {
+	return _user$project$Tools$decToBin(
+		A2(
+			_elm_lang$core$Maybe$withDefault,
+			0,
+			_elm_lang$core$Result$toMaybe(
+				_elm_lang$core$String$toInt(input))));
+};
