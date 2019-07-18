@@ -1,5 +1,7 @@
 # elm-conversor
 
+Aplicación que simula un conversor de decimal a binario,octal y hexadecimal. Este aplicación esta programada en Elm y el estilo con css. 
+
 Atención: la versión de elm que usa este programa es la 0.18.0. NO funciona en la versión 0.19.0
 
 Conversor de decimal a binario, octal y hexadecimal. 
