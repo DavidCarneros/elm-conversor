@@ -3,6 +3,10 @@ module Update exposing(..)
 import Types exposing (..)
 import Tools exposing (..)
 
+{-
+Fichero que contiene la funcion para actualizar
+-}
+
 initialModel : Model 
 initialModel  = 
     { display = "0000000"

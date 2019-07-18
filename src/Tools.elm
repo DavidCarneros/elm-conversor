@@ -1,5 +1,10 @@
 module Tools exposing(convertToBin,convertToHex,convertToOct)
 
+{-
+Fichero que contiene las herramientas para que 
+funcione el conversor.
+-}
+
 decToBin : Int -> String 
 decToBin value = 
     if value < 2 then

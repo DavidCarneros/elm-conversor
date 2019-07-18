@@ -1,5 +1,9 @@
 module Types exposing(..)
 
+{-
+Fichero que contiene los tipos de mensajes
+-}
+
 type alias Model = 
     { display : String
     , result : String 

@@ -5,6 +5,8 @@ import View exposing (..)
 import Types exposing (..)
 import Update exposing (..)
 
+{- Fichero principal del programa
+-}
 main : Program Never Model Msg 
 main = 
     beginnerProgram

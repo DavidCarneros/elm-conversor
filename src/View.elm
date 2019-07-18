@@ -5,6 +5,10 @@ import Html.Attributes exposing (class,id,type_)
 import Html.Events exposing (onClick)
 import Types exposing (..)
 
+{-
+Fichero que contiene la vista del programa
+-}
+
 view : Model -> Html Msg 
 view model = 
     div [] 
