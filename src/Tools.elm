@@ -2,10 +2,8 @@ module Tools exposing(convertToBin,convertToHex,convertToOct)
 
 decToBin : Int -> String 
 decToBin value = 
-    if value // 2 == 0 then
-        "0"
-    else if value // 2 == 1 then 
-        "1"
+    if value < 2 then
+        toString value
     else 
         decToBin (value//2) ++ toString (value % 2) 
 

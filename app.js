@@ -8675,11 +8675,11 @@ var _user$project$Tools$convertToHex = function (input) {
 				_elm_lang$core$String$toInt(input))));
 };
 var _user$project$Tools$decToBin = function (value) {
-	return _elm_lang$core$Native_Utils.eq((value / 2) | 0, 0) ? '0' : (_elm_lang$core$Native_Utils.eq((value / 2) | 0, 1) ? '1' : A2(
+	return (_elm_lang$core$Native_Utils.cmp(value, 2) < 0) ? _elm_lang$core$Basics$toString(value) : A2(
 		_elm_lang$core$Basics_ops['++'],
 		_user$project$Tools$decToBin((value / 2) | 0),
 		_elm_lang$core$Basics$toString(
-			A2(_elm_lang$core$Basics_ops['%'], value, 2))));
+			A2(_elm_lang$core$Basics_ops['%'], value, 2)));
 };
 var _user$project$Tools$convertToBin = function (input) {
 	return _user$project$Tools$decToBin(
