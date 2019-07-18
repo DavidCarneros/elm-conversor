@@ -5,6 +5,8 @@ Fichero que contiene las herramientas para que
 funcione el conversor.
 -}
 
+{- Funcion que convierte un entero a binario(string)
+-}
 decToBin : Int -> String 
 decToBin value = 
     if value < 2 then
@@ -12,6 +14,9 @@ decToBin value =
     else 
         decToBin (value//2) ++ toString (value % 2) 
 
+{- Funcion que convierte un String a entero y 
+llama a la funcion para convetir a binario(string)
+-}
 convertToBin : String -> String 
 convertToBin input = 
     decToBin <|
@@ -20,6 +25,9 @@ convertToBin input =
     String.toInt <|
     input
 
+{- Funcion que convierte un String a entero y 
+llama a la funcion para convetir a hexadecimal(string)
+-}
 convertToHex : String -> String 
 convertToHex input = 
     decToHex <|
@@ -27,7 +35,8 @@ convertToHex input =
     Result.toMaybe <|
     String.toInt <|
     input
-
+{- Funcion que convierte un entero a Hexadecimal(string)
+-}
 decToHex : Int -> String 
 decToHex value = 
     let
@@ -55,7 +64,8 @@ decToHex value =
         else 
             decToHex result ++ toString mod            
   
-
+{- Funcion que convierte un entero a Octal(string)
+-}
 decToOct : Int -> String 
 decToOct value = 
     let
@@ -67,6 +77,9 @@ decToOct value =
         else 
             decToOct div ++ toString mod
 
+{- Funcion que convierte un String a entero y 
+llama a la funcion para convetir a octal(string)
+-}
 convertToOct : String -> String 
 convertToOct input = 
     decToOct <|
