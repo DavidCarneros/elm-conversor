@@ -1,0 +1,130 @@
+body {
+    background-color: #e6ffff;
+  }
+
+.conversor-tittle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    letter-spacing: -1.2px;
+    word-spacing: 2px;
+    color: #0839FF;
+    font-weight: bold;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-align: center;
+}
+
+.display-tittle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 27px;
+    letter-spacing: -1.2px;
+    word-spacing: 2px;
+    color: #9B9B9B;
+    font-weight: bold;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-align: center;
+    padding: 5px;
+}
+.conversor-container{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    max-height: 550px;
+    max-width: 330px;
+    height: auto;
+    width: 90%;
+    border-radius: 35px;
+    background: #CDCDCD;
+	position: center;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+}
+
+.conversor-row {
+   /* display: flex; */
+    align-content: center;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: left;
+    margin-top: 10px;
+    margin: 5px;
+}
+
+.number-button {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    padding: 5px;
+    height: 75px;
+    width: 75px;
+    border-radius: 15px; 
+    background: dodgerblue;
+    position: left;
+    outline: none;
+    margin-left: 3px;
+}
+
+.conversion-button {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    padding: 5px;
+    height: 75px;
+    width: 75px;
+    border-radius: 15px; 
+    background: dimgrey;
+    position: left;
+    outline: none;
+    margin-left: 3px;
+}
+
+.calc-button {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    padding: 5px;
+    height: 75px;
+    width: 150px;
+    border-radius: 15px; 
+    background: #8585ad;
+    position: left;
+    outline: none;
+    margin-left: 3px;
+}
+
+.clear-button {
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    padding: 5px;
+    height: 75px;
+    width: 75px;
+    border-radius: 15px; 
+    background: #ff4d4d;
+    position: left;
+    outline: none;
+    margin-left: 3px;
+}
+
+.conversor-display{
+    font-family: 'Courier New', Courier, monospace;
+    color: #d8d8d8;
+    border: 5px solid #9B9B9B;
+    border-radius: 24px;
+    background: #9B9B9B;
+    text-align: right;
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    padding: 10px;
+
+}
