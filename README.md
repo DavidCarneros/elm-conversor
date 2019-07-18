@@ -18,3 +18,6 @@ Conversor de decimal a binario, octal y hexadecimal.
 
 Se muestra un ejemplo de funcionamiento en el gif
 
+<p aling="center">
+<img src = "https://i.gyazo.com/7810bb7dc31bbf4527e618e8c545675c.gif">
+</p>
